@@ -8,7 +8,7 @@
 }
 
 html {
-    max-width: 100px;
+    max-width: 100%;
 }
 
 body {
@@ -196,4 +196,49 @@ nav a:hover {
 
 .hero-section button:hover, button:active {
   opacity: 0.9;
+}
+
+/* WHAT WE DO SECTION */
+
+.what-we-do {
+  text-align: center;
+  padding: 100px 500px 100px 500px;
+}
+
+.what-we-do .wwd-top {
+    display: inline-block;
+    width: 65%;
+}
+
+.what-we-do p {
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row {
+    padding-top: 60px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.holberton_school-icon-ic_sound, .holberton_school-icon-ic_music, .holberton_school-icon-ic_hearing, .holberton_school-icon-ic_video {
+  font-size: 125px;
+  color: #FF6565;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }

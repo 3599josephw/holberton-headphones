@@ -8,7 +8,7 @@
 }
 
 html {
-    max-width: 100px;
+    max-width: 100%;
 }
 
 body {
@@ -153,7 +153,6 @@ nav a:hover {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .hero .hero-text{
@@ -192,8 +191,153 @@ nav a:hover {
   border: 0px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   font-size: 14px;
+  font-weight: bold;
 }
 
 .hero-section button:hover, button:active {
   opacity: 0.9;
 }
+
+
+/* ROWS & COLUMNS */
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row {
+    padding-top: 60px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* WHAT WE DO SECTION */
+
+.what-we-do {
+  text-align: center;
+  padding: 100px 500px 100px 500px;
+}
+
+.what-we-do .wwd-top {
+    display: inline-block;
+    width: 65%;
+}
+
+.what-we-do p {
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+}
+
+.holberton_school-icon-ic_sound, .holberton_school-icon-ic_music, .holberton_school-icon-ic_hearing, .holberton_school-icon-ic_video {
+  font-size: 125px;
+  color: #FF6565;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* RESULTS SECTION */
+
+.results {
+  text-align: center;
+  padding: 150px 500px 150px 500px;
+  background-image: url(images/headphones_hero_2.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.results .results-top {
+    display: inline-block;
+    width: 65%;
+}
+
+.results p {
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.results h1, h2 {
+  color: #fff;
+}
+
+.results .column {
+  background-image: url(images/pentagone.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 130px;
+  vertical-align: center;
+  padding-top: 50px;
+}
+
+.results h2 {
+  font-size: 42px;
+}
+
+/* CONTACT US */
+
+.contact {
+  text-align: center;
+  padding: 100px 500px 100px 500px;
+}
+
+.contact h1 {
+  font-size: 32px;
+}
+
+/* CONTACT FORM */
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: transparent;
+  border-width: 0 0 0.1px;
+  transition: all 0.1s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 50px;
+}
+
+[type="submit"] {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 22px;
+  padding: 15px 25px 15px 25px;
+  background: #FF6565;
+  color: #fff;
+  border: 0px;
+  font-size: 14px;
+  font-weight: bold;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+
+
+/* FOOTER */
