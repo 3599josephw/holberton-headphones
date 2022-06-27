@@ -37,7 +37,7 @@ header {
 
 /* NAV BAR */
 
-nav {
+.nav {
   position: absolute;
   top: 50px;
   z-index: 3;
@@ -45,7 +45,7 @@ nav {
   overflow: hidden;
 }
 
-nav a {
+.nav a {
   color: #f6f4e6;
   text-decoration: none;
   font-size: 1em;
@@ -56,87 +56,85 @@ nav a {
   transition: all 0.2s ease-in-out;
 }
 
-nav a:hover {
+.nav a:hover {
   color: #FF6565;
 }
 
-/* MOBILE MENU */
+/* RESPONSIVE HEADER */
 
-.mobile-menu {
+/* Menu Icon */
+.hamb{
     cursor: pointer;
-    float: left;
-    padding: 0px 30px;
-    display: none;
-}
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
 
-.mobile-menu-line {
-    background: white;
+.hamb-line {
+    background: var(--white);
     display: block;
-    height: 0.185rem;
+    height: 2px;
     position: relative;
-    width: 10px;
-    top: -20px;
-}
+    width: 24px;
 
-.mobile-menu-line::before,
-.mobile-menu-line::after {
-    background: white;
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
     content: '';
     display: block;
     height: 100%;
     position: absolute;
     transition: all .2s ease-out;
-    width: 200%;
+    width: 100%;
 }
-
-.mobile-menu-line::before {
-    top: 7px;
+.hamb-line::before{
+    top: 5px;
 }
-.mobile-menu-line::after {
-    top: -7px;
+.hamb-line::after{
+    top: -5px;
 }
 
 .side-menu {
     display: none;
-}
+} /* Hide checkbox */
 
-/* TOGGLE MENU ICON */
-
-.side-menu:checked ~ .navMenu {
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
     max-height: 100%;
-    display: block;
 }
-.side-menu:checked ~ .mobile-menu .mobile-menu-line {
+.side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
 }
-.side-menu:checked ~ .mobile-menu .mobile-menu-line::before {
+.side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
     top:0;
 }
-.side-menu:checked ~ .mobile-menu .mobile-menu-line::after {
+.side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
     top:0;
 }
 
-@media(max-width: 480px) {
-    nav {
-        top: 7rem;
-        overflow: hidden;
-        display: none;
-        left: 40%;
-        position: absolute;
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
 
     }
-    nav a {
-        padding-bottom: 18px;
-        display: block;
-    }
 
-    .mobile-menu {
+    .hamb{
         display: block;
-    }
-    .logo img {
-        padding-left: 25px;
     }
 }
 

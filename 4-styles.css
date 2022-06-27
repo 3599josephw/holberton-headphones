@@ -341,3 +341,35 @@ textarea {
 
 
 /* FOOTER */
+
+footer {
+  background-color: #071629;
+  padding: 100px 0px 0px 100px;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer .footer-logo {
+  flex: 80%;
+}
+
+.footer .social-media {
+  flex: 20%;
+  justify-content: right;
+}
+
+.holberton_school-icon-ic_facebook, .holberton_school-icon-ic_twitter, .holberton_school-icon-ic_instagram {
+  font-size: 42px;
+  color: #fff;
+  padding: 10px;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  opacity: 0.35;
+  padding-top: 75px;
+  padding-bottom: 40px;
+}
