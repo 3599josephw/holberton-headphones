@@ -8,7 +8,7 @@
 }
 
 html {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -62,6 +62,99 @@ nav a:hover {
 
 /* MOBILE MENU */
 
+.mobile-menu {
+    cursor: pointer;
+    float: left;
+    padding: 0px 30px;
+    display: none;
+}
+
+.mobile-menu-line {
+    background: white;
+    display: block;
+    height: 0.185rem;
+    position: relative;
+    width: 10px;
+    top: -20px;
+}
+
+.mobile-menu-line::before,
+.mobile-menu-line::after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 200%;
+}
+
+.mobile-menu-line::before {
+    top: 7px;
+}
+.mobile-menu-line::after {
+    top: -7px;
+}
+
+.side-menu {
+    display: none;
+}
+
+/* TOGGLE MENU ICON */
+
+.side-menu:checked ~ .navMenu {
+    max-height: 100%;
+    display: block;
+}
+.side-menu:checked ~ .mobile-menu .mobile-menu-line {
+    background: transparent;
+}
+.side-menu:checked ~ .mobile-menu .mobile-menu-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .mobile-menu .mobile-menu-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (max-width: 480px) {
+    nav {
+        top: 7rem;
+        overflow: hidden;
+        display: none;
+        left: 40%;
+        position: absolute;
+
+    }
+    nav a {
+        padding-bottom: 18px;
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .logo img {
+      padding-left: 25px;
+    }
+
+    .logo {
+      padding-left: 0px;
+    }
+}
+
+@media (max-width:768px) {
+  .logo {
+    padding-left: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    width: 6rem;
+  }
+}
 
 /* HERO SECTION */
 
@@ -78,12 +171,6 @@ nav a:hover {
     background-repeat: no-repeat;
 }
 
-.hero .hero-text{
-    width: 100%;
-    height: 10vh;
-
-}
-
 .hero-section h1 {
     font-size: 3em;
     margin-top: 0;
@@ -98,10 +185,10 @@ nav a:hover {
 .hero-section p {
     color: #fff;
     font-size: 1em;
-    margin-left: auto;
-    margin-right: auto;
     width: 40%;
     line-height: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-section button {
@@ -114,10 +201,40 @@ nav a:hover {
   border: 0px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   font-size: 14px;
+  font-weight: bold;
 }
 
 .hero-section button:hover, button:active {
   opacity: 0.9;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+  .hero-section h1 {
+    font-size: 32px;
+    padding: 50px;
+  }
+
+  .hero-section p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .hero-section h3 {
+    padding: 20px;
+  }
+
+  .hero-section p {
+    width: 80%;
+    padding: 0px;
+}
 }
 
 
@@ -138,6 +255,22 @@ nav a:hover {
   clear: both;
 }
 
+/* Responsive */
+
+@media (max-width:768px) {
+  .column {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .column {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
 /* WHAT WE DO SECTION */
 
 .what-we-do {
@@ -147,7 +280,7 @@ nav a:hover {
 
 .what-we-do .wwd-top {
     display: inline-block;
-    width: 65%;
+    width: 80%;
 }
 
 .what-we-do p {
@@ -157,16 +290,38 @@ nav a:hover {
   line-height: 1.5em;
 }
 
+.what-we-do h2 {
+  color: #000;
+}
+
 .holberton_school-icon-ic_sound, .holberton_school-icon-ic_music, .holberton_school-icon-ic_hearing, .holberton_school-icon-ic_video {
   font-size: 125px;
   color: #FF6565;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
+
+/* Responsive */
+
+@media (max-width:768px) {
+ .what-we-do {
+   padding: 50px 50px 50px 50px;
+ }
+
+ .what-we-do .wwd-top {
+   width: 100%;
+ }
+}
+
+@media (max-width: 480px) {
+  .what-we-do {
+    padding: 50px 30px 50px 30px;
+  }
+
+  .what-we-do .wwd-top {
+    width: 100%
   }
 }
+
 
 /* RESULTS SECTION */
 
@@ -209,3 +364,176 @@ nav a:hover {
 .results h2 {
   font-size: 42px;
 }
+
+/* Responsive */
+
+@media (max-width:768px) {
+  .results {
+    padding: 50px 50px 50px 50px;
+  }
+
+  .results .results-top {
+    width: 100%;
+  }
+
+ }
+
+ @media (max-width: 480px) {
+   .results {
+     padding: 50px 30px 50px 30px;
+   }
+
+   .results .results-top {
+     width: 100%;
+   }
+ }
+
+/* CONTACT US */
+
+.contact {
+  text-align: center;
+  padding: 100px 500px 100px 500px;
+}
+
+.contact h1 {
+  font-size: 32px;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+  .contact {
+    padding: 50px 0px 50px 0px;
+  }
+ }
+
+ @media (max-width: 480px) {
+   .contact {
+     padding: 50px 30px 50px 30px;
+   }
+ }
+
+
+/* CONTACT FORM */
+
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: transparent;
+  border-width: 0 0 0.1px;
+  transition: all 0.1s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 50px;
+}
+
+[type="submit"] {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 22px;
+  padding: 15px 25px 15px 25px;
+  background: #FF6565;
+  color: #fff;
+  border: 0px;
+  font-size: 14px;
+  font-weight: bold;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+
+
+/* FOOTER */
+
+footer {
+  background-color: #071629;
+  padding: 100px 0px 0px 100px;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer .footer-logo {
+  flex: 80%;
+}
+
+.footer .social-media {
+  flex: 20%;
+  justify-content: right;
+}
+
+.holberton_school-icon-ic_facebook, .holberton_school-icon-ic_twitter, .holberton_school-icon-ic_instagram {
+  font-size: 42px;
+  color: #fff;
+  padding: 10px;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  opacity: 0.35;
+  padding-top: 75px;
+  padding-bottom: 40px;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+  footer {
+    padding: 20px;
+  }
+
+  .footer {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .footer .social-media {
+    flex: 40%;
+    vertical-align: center;
+    padding-top: 15px;
+  }
+
+  .copyright {
+    padding-top: 30px;
+  }
+ }
+
+ @media (max-width: 480px) {
+    footer {
+      padding: 50px 30px 50px 30px;
+    }
+
+    .footer {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer .footer-logo img {
+      width: 75%;
+      padding-left: 10%;
+    }
+
+    .footer .social-media {
+     align-items: center;
+     padding-left: 20%;
+     padding-top: 50px;
+    }
+  }
